@@ -10,14 +10,18 @@ var app = new Vue({
         todo_list: [
             'fare la spesa',
             'stampare i fogli',
-            'cucinare'
+            'andare dal dentista'
         ]
     },
 
     methods: {
-        addTodo: function () {
+        addTodo() {
            this.todo_list.push(this.new_todo);
            this.new_todo = '';
+        },
+
+        removeTodo(index) {
+           this.todo_list.splice(index, 1);
         }
     }
 

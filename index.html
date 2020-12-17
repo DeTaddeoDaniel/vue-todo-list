@@ -26,19 +26,24 @@
 
     <div id="root">
 
+        <h2>New todo item</h2>
         <input type="text" v-model="new_todo">
+        
+        <button @click='addTodo'>Aggiungi</button>
 
-        <button @click='addTodo'>Aggiungi4</button>
-
+        <h2>List to do list</h2>
         <ul>
-
-            <li v-for="item in todo_list">
-                {{ item }}
+            <li v-for="(item, index) in todo_list" @click='removeTodo(index)'>
+                {{ item }} 
             </li>
 
         </ul>
 
-        <p>{{new_todo}}</p>
+        <h2>Check text input value</h2>
+        <p>input:{{new_todo}}</p>
+
+        <h2>Remove item todo</h2>
+        <p>If click todo list item,it remove from to do list</p>
 
         <script src='js/app.js' charset='UTF-8'></script>
 
