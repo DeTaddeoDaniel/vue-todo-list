@@ -27,7 +27,7 @@
     <div id="root">
 
         <h2>New todo item</h2>
-        <input type="text" v-model="new_todo">
+        <input type="text" v-model="new_todo" @keyUp.enter='addTodo'>
         
         <button @click='addTodo'>Aggiungi</button>
 
