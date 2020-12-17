@@ -1,15 +1,24 @@
 var app = new Vue({
     
-    el: '#app',
+    el: "#root",
     
     data: {
-        message: 'Hello World'
+        title_app: 'To do list',
+
+        new_todo: '',
+
+        todo_list: [
+            'fare la spesa',
+            'stampare i fogli',
+            'cucinare'
+        ]
     },
 
     methods: {
-        miaFunzione: function () {
-            //Codice
+        addTodo: function () {
+           this.todo_list.push(this.new_todo);
+           this.new_todo = '';
+        }
     }
-}
 
 });
